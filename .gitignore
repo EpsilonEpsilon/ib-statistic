@@ -1,0 +1,87 @@
+# compiled output
+/server/dist
+*/node_modules
+/server/build
+
+# Logs
+/serverlogs
+/server*.log
+/servernpm-debug.log*
+/serverpnpm-debug.log*
+/serveryarn-debug.log*
+/serveryarn-error.log*
+/server/lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/server/coverage
+/server/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dotenv environment variable files
+/server.env
+/server.env.development.local
+/server.env.test.local
+/server.env.production.local
+/server.env.local
+
+# temp directory
+/server.temp
+/server.tmp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/client/dist
+/client/tmp
+/client/out-tsc
+/client/bazel-out
+
+
+/clientnpm-debug.log
+/clientyarn-error.log
+
+# IDEs and editors
+.idea/
+.history/*
+
+# Miscellaneous
+/client/.angular/cache
+/client.sass-cache/
+/client/connect.lock
+/client/coverage
+/client/libpeerconnection.log
+/clienttestem.log
+/client/typings
+
+# System files
+.DS_Store
+Thumbs.db

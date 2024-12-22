@@ -1,0 +1,8 @@
+<div class="root">
+  <h2 class="title">Log in</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="authForm" class = "form">
+    <input formControlName = "name" name = "name" nzSize="large" nz-input placeholder="User Name" type="text" />
+    <input   formControlName = "password" name = "password" nzSize="large" nz-input placeholder="Password" type="password" />
+    <button type = "submit"  nz-button nzSize="large" nzType="primary">Log in</button>
+  </form>
+</div>

@@ -1,0 +1,33 @@
+.root{
+  background: #32323E;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.auth-root{
+  width: 100%;
+}
+
+
+.title{
+  font-size: 28px;
+  color: white;
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+[nz-button]{
+  width: 150px;
+  margin: 0 auto;
+}

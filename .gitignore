@@ -1,8 +1,9 @@
 # compiled output
 /server/dist
-*/node_modules
+server/node_modules
 /server/build
 
+client/node_modules
 # Logs
 /serverlogs
 /server*.log

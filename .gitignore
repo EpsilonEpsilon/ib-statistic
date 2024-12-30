@@ -2,7 +2,7 @@
 /server/dist
 server/node_modules
 /server/build
-
+./node_modules
 client/node_modules
 # Logs
 /serverlogs
@@ -86,3 +86,4 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 # System files
 .DS_Store
 Thumbs.db
+/node_modules/

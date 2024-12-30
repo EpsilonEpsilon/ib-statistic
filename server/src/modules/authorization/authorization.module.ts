@@ -5,7 +5,7 @@ import UserModule from "../user/user.module";
 import PrismaService from "../prisma/prisma.service";
 import PasswordService from "../../shared/services/password.service";
 import {JwtModule} from "@nestjs/jwt";
-import constants from "../../constants";
+import config from "../../config";
 
 
 @Module({
@@ -15,7 +15,7 @@ import constants from "../../constants";
     global:true,
     secret:process.env["SECRET_TOKEN"],
     signOptions: {
-      expiresIn:constants.jwt.expireIn
+      expiresIn:config.jwt.expireIn
     }
   }),],
 })

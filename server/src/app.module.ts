@@ -3,7 +3,7 @@ import AuthorizationModule from './modules/authorization/authorization.module';
 import PrismaModule from "./modules/prisma/prisma.module";
 import SharedModule from "./shared/shared.module";
 import {ConfigModule} from "@nestjs/config";
-import AuthGuard from "./modules/authorization/auth.guard";
+import AppGuard from "./app.guard";
 
 @Module({
   imports: [
@@ -15,9 +15,10 @@ import AuthGuard from "./modules/authorization/auth.guard";
   providers:[
     {
       provide:"APP_GUARD",
-      useClass:AuthGuard
+      useClass:AppGuard
     }
   ]
+
 })
 export class AppModule {
 }

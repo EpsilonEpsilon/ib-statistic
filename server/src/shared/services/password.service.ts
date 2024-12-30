@@ -17,9 +17,9 @@ class PasswordService {
         })
     }
 
-    public async comparePassword(password:string):Promise<boolean> {
+    public async comparePassword(password:string, hash:string):Promise<boolean> {
         return new Promise((resolve, reject) => {
-            compare(password, password, function(err, isMatch) {
+            compare(password, hash, function(err, isMatch) {
                 if(err) return reject(err);
                 return resolve(isMatch);
             })

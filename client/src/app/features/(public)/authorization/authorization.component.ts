@@ -8,12 +8,19 @@ import {
 } from '@angular/forms';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import {HttpClientModule} from "@angular/common/http";
+import AuthorizationService from "./authorization.service";
 
 @Component({
   selector: 'auth-root',
-  imports: [FormsModule, NzInputModule, NzButtonModule, ReactiveFormsModule],
+  imports: [FormsModule,
+    HttpClientModule,
+    NzInputModule,
+    NzButtonModule,
+    ReactiveFormsModule],
   templateUrl: './authorization.component.html',
   styleUrls: ['./authorization.component.scss'],
+  providers:[AuthorizationService],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
   host: {
@@ -21,6 +28,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
   },
 })
 class AuthorizationComponent {
+  constructor(private authorizationService: AuthorizationService) {}
+
   authForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
@@ -28,6 +37,7 @@ class AuthorizationComponent {
 
   onSubmit() {
     if (!this.authForm.valid) return;
+    this.authorizationService.authorization(this.authForm.value.name!, this.authForm.value.password!)
   }
 
   getFormError(field: 'name' | 'password') {
